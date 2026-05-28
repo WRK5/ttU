@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="ttU - Técnico em Eletrotécnica em Petrópolis/RJ. Especialista em instalações elétricas, HVAC, manutenção preventiva e corretiva. Atendimento técnico especializado na região serrana."/>
+<meta property="og:title" content="ttU • Técnico Eletrotécnica | Petrópolis/RJ"/>
+<meta property="og:description" content="Soluções profissionais em instalações, climatização e manutenção preventiva."/>
+<meta property="og:type" content="website"/>
+
+<title>ttU • Técnico Eletrotécnica | Petrópolis/RJ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===================================== */
+/* RESET */
+/* ===================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Outfit',sans-serif;
+  background:#050505;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ===================================== */
+/* COR PRINCIPAL */
+/* ===================================== */
+
+:root{
+  --gold:#c6a86a;
+}
+
+/* ===================================== */
+/* FUNDO */
+/* ===================================== */
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+  radial-gradient(circle at top right,
+  rgba(198,168,106,.04),
+  transparent 28%),
+  radial-gradient(circle at bottom left,
+  rgba(198,168,106,.03),
+  transparent 30%);
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* ===================================== */
+/* NAVBAR */
+/* ===================================== */
+
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  padding:18px 7%;
+  backdrop-filter:blur(16px);
+  background:rgba(0,0,0,.22);
+  border-bottom:1px solid rgba(255,255,255,.03);
+}
+
+.nav-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo img{
+  width:78px;
+  height:auto;
+  display:block;
+  filter:
+  drop-shadow(0 0 10px rgba(198,168,106,.08));
+  transition:.35s ease;
+}
+
+.logo img:hover{
+  transform:scale(1.04);
+}
+
+.nav-links{
+  display:flex;
+  gap:34px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#cfcfcf;
+  font-size:14px;
+  transition:.3s ease;
+}
+
+.nav-links a:hover{
+  color:var(--gold);
+}
+
+/* ===================================== */
+/* HERO */
+/* ===================================== */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:140px 7% 90px;
+  position:relative;
+}
+
+/* GRID TÉCNICO */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+  linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size:60px 60px;
+  mask-image:
+  linear-gradient(to bottom,
+  transparent,
+  black 20%,
+  black 80%,
+  transparent);
+  opacity:.5;
+}
+
+/* GLOW CENTRAL */
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:240px;
+  height:240px;
+  background:
+  radial-gradient(circle,
+  rgba(198,168,106,.08),
+  rgba(198,168,106,.03),
+  transparent 72%);
+  filter:blur(35px);
+  top:42%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:950px;
+}
+
+.tag{
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:4px;
+  margin-bottom:24px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  font-size:78px;
+  line-height:1.05;
+  margin-bottom:28px;
+  font-weight:700;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero p{
+  color:#9c9c9c;
+  max-width:680px;
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:46px;
+}
+
+/* ===================================== */
+/* BOTÕES */
+/* ===================================== */
+
+.buttons{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  text-decoration:none;
+  padding:16px 32px;
+  border-radius:14px;
+  transition:.35s ease;
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:15px;
+}
+
+.btn-gold{
+  background:var(--gold);
+  color:#111;
+}
+
+.btn-gold:hover{
+  transform:translateY(-3px);
+  box-shadow:
+  0 10px 26px rgba(198,168,106,.16);
+}
+
+.btn-dark{
+  border:1px solid rgba(255,255,255,.06);
+  color:#fff;
+  background:rgba(255,255,255,.02);
+}
+
+.btn-dark:hover{
+  border-color:rgba(198,168,106,.18);
+  background:rgba(198,168,106,.03);
+}
+
+/* ===================================== */
+/* INFO BAR */
+/* ===================================== */
+
+.info-strip{
+  width:100%;
+  padding:22px 7%;
+  border-top:1px solid rgba(255,255,255,.03);
+  border-bottom:1px solid rgba(255,255,255,.03);
+  background:#080808;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.info-item{
+  color:#8d8d8d;
+  font-size:14px;
+}
+
+.info-item strong{
+  color:#fff;
+}
+
+/* ===================================== */
+/* SERVIÇOS */
+/* ===================================== */
+
+.services{
+  padding:120px 7%;
+}
+
+.section-top{
+  margin-bottom:70px;
+}
+
+.section-top span{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:12px;
+}
+
+.section-top h2{
+  font-size:52px;
+  margin-top:18px;
+  max-width:720px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+
+/* ===================================== */
+/* CARDS */
+/* ===================================== */
+
+.card{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  padding:42px;
+  background:
+  linear-gradient(
+  145deg,
+  rgba(255,255,255,.022),
+  rgba(255,255,255,.008));
+  border:
+  1px solid rgba(255,255,255,.04);
+  transition:
+  transform .45s ease,
+  border-color .45s ease,
+  box-shadow .45s ease,
+  background .45s ease;
+  cursor:pointer;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* glow principal */
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-35%;
+  background:
+  radial-gradient(circle,
+  rgba(198,168,106,.18) 0%,
+  rgba(198,168,106,.05) 28%,
+  transparent 70%);
+  opacity:0;
+  transition:opacity .45s ease;
+  pointer-events:none;
+}
+
+/* brilho superior */
+
+.card::after{
+  content:"";
+  position:absolute;
+  top:-90px;
+  left:-70px;
+  width:240px;
+  height:240px;
+  background:
+  radial-gradient(circle,
+  rgba(255,255,255,.06),
+  transparent 70%);
+  opacity:0;
+  transition:opacity .45s ease;
+  pointer-events:none;
+}
+
+/* HOVER */
+
+.card:hover{
+  transform:
+  translateY(-8px);
+  border-color:
+  rgba(198,168,106,.14);
+  background:
+  linear-gradient(
+  145deg,
+  rgba(255,255,255,.03),
+  rgba(198,168,106,.015));
+  box-shadow:
+  0 0 30px rgba(198,168,106,.04),
+  0 16px 40px rgba(0,0,0,.5);
+}
+
+.card:hover::before{
+  opacity:1;
+}
+
+.card:hover::after{
+  opacity:1;
+}
+
+.card:hover .icon{
+  transform:scale(1.08);
+  filter:
+  drop-shadow(0 0 10px rgba(198,168,106,.30));
+}
+
+/* ===== ESTADO ATIVO (INTERRUPTOR) ===== */
+
+.card.active{
+  transform:
+  translateY(-8px);
+  border-color:
+  rgba(198,168,106,.35);
+  background:
+  linear-gradient(
+  145deg,
+  rgba(255,255,255,.05),
+  rgba(198,168,106,.04));
+  box-shadow:
+  0 0 50px rgba(198,168,106,.12),
+  0 0 80px rgba(198,168,106,.06),
+  0 16px 40px rgba(0,0,0,.5);
+}
+
+.card.active::before{
+  opacity:1;
+}
+
+.card.active::after{
+  opacity:1;
+}
+
+.card.active .icon{
+  transform:scale(1.12);
+  filter:
+  drop-shadow(0 0 16px rgba(198,168,106,.50));
+}
+
+/* ÍCONE */
+
+.icon{
+  font-size:38px;
+  margin-bottom:28px;
+  transition:
+  transform .35s ease,
+  filter .35s ease;
+}
+
+/* TEXTO */
+
+.card h3{
+  font-size:34px;
+  margin-bottom:22px;
+}
+
+.card p{
+  color:#989898;
+  line-height:1.9;
+  font-size:18px;
+}
+
+/* ===================================== */
+/* HVAC CARD - PARCEIRO */
+/* ===================================== */
+
+.hvac-partner{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+
+.hvac-partner img{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--gold);
+  transition:transform .3s ease;
+}
+
+.hvac-partner:hover img{
+  transform:scale(1.1);
+}
+
+.hvac-partner-info{
+  text-align:left;
+}
+
+.hvac-partner-info .label{
+  font-size:11px;
+  color:var(--gold);
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:2px;
+}
+
+.hvac-partner-info .name{
+  font-size:14px;
+  color:#fff;
+  font-weight:500;
+}
+
+.hvac-partner-info .desc{
+  font-size:12px;
+  color:#8d8d8d;
+}
+
+/* ===================================== */
+/* FOOTER */
+/* ===================================== */
+
+footer{
+  padding:50px 7%;
+  border-top:
+  1px solid rgba(255,255,255,.04);
+  color:#666;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+/* ===================================== */
+/* RESPONSIVO */
+/* ===================================== */
+
+@media(max-width:900px){
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding-top:130px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .section-top h2{
+    font-size:34px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    text-align:center;
+  }
+
+  .card{
+    padding:34px;
+  }
+
+  .card h3{
+    font-size:28px;
+  }
+
+  .card p{
+    font-size:16px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+  <div class="nav-content">
+    <div class="logo">
+      <img src="https://i.ibb.co/VWXvnxXg/ttu-logo.png" alt="Logo ttU">
+    </div>
+    <div class="nav-links">
+      <a href="#">Início</a>
+      <a href="#">Serviços</a>
+      <a href="#">Projetos</a>
+      <a href="#">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="tag">
+      TÉCNICO ELETROTÉCNICA • HVAC • PREVENTIVA
+    </div>
+    <h1>
+      Técnico em eletrotécnica com
+      presença <span>moderna</span>.
+    </h1>
+    <p>
+      Soluções profissionais em instalações,
+      climatização e manutenção preventiva
+      com estética sofisticada, identidade premium
+      e organização técnica.
+    </p>
+    <div class="buttons">
+      <a href="https://wa.me/5524993352912" class="btn btn-gold">
+        WhatsApp
+      </a>
+      <a href="#" class="btn btn-dark">
+        Explorar Serviços
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+
+<section class="info-strip">
+  <div class="info-item">
+    <strong>Atendimento</strong> Técnico Especializado
+  </div>
+  <div class="info-item">
+    <strong>Foco</strong> HVAC & Preventiva
+  </div>
+  <div class="info-item">
+    <strong>Visual</strong> Premium Minimalista
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+
+<section class="services">
+  <div class="section-top">
+    <span>SERVIÇOS</span>
+    <h2>
+      Estrutura moderna para ambientes
+      técnicos e profissionais.
+    </h2>
+  </div>
+  <div class="cards">
+
+    <!-- CARD 1 -->
+    <div class="card" onclick="toggleCard(this)">
+      <div class="icon">⚡</div>
+      <h3>Instalações</h3>
+      <p>
+        Projetos e adequações elétricas
+        com foco em segurança, organização
+        e desempenho técnico.
+      </p>
+    </div>
+
+    <!-- CARD 2 - HVAC COM PARCEIRO -->
+    <div class="card" onclick="toggleCard(this)">
+      <div class="icon">❄️</div>
+      <h3>HVAC</h3>
+      <p>
+        Soluções em climatização e refrigeração
+        para ambientes residenciais e comerciais.
+        Contamos com parceiro especialista para
+        projetos de maior complexidade.
+      </p>
+      <a href="https://wa.me/5521994837879" target="_blank" class="hvac-partner" title="Falar com o parceiro especialista" onclick="event.stopPropagation()">
+        <img src="https://i.ibb.co/PZf2xtjP/tec-thomaz-logo.png" alt="Parceiro HVAC">
+        <div class="hvac-partner-info">
+          <div class="label">Parceiro Especialista</div>
+          <div class="name">TecThomaz</div>
+          <div class="desc">Mais experiência em HVAC</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card" onclick="toggleCard(this)">
+      <div class="icon">🛠️</div>
+      <h3>Preventiva</h3>
+      <p>
+        Redução de falhas e aumento da vida útil
+        dos equipamentos através de manutenção inteligente.
+      </p>
+    </div>
+
+    <!-- CARD 4 - CORRETIVA -->
+    <div class="card" onclick="toggleCard(this)">
+      <div class="icon">🔧</div>
+      <h3>Corretiva</h3>
+      <p>
+        Diagnóstico detalhado, relatório técnico e orçamento
+        transparente antes de qualquer intervenção.
+        Execução com responsabilidade, no tempo certo.
+      </p>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card" onclick="toggleCard(this)">
+      <div class="icon">📊</div>
+      <h3>Diagnóstico</h3>
+      <p>
+        Identificação técnica de falhas,
+        análises e soluções eficientes.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div>
+    © 2026 ttU • Tec.Eletrotécnica 
+  </div>
+  <div>
+    Petrópolis • RJ
+  </div>
+</footer>
+
+<script>
+function toggleCard(card) {
+  // Se já está ativo, desativa (apaga)
+  if (card.classList.contains('active')) {
+    card.classList.remove('active');
+  } else {
+    // Se não está ativo, ativa (ilumina)
+    card.classList.add('active');
+  }
+}
+</script>
+
+</body>
+</html>
